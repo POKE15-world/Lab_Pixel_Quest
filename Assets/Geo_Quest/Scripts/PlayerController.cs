@@ -5,19 +5,21 @@ using Unity.Collections.LowLevel.Unsafe;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     string varibaleone = "hello";
     int varone = 0;
     int vartwo = 5;
     public int speed = 5;
-    public int deathCount = 0; 
+    public int deathCount = 0;
+    public int hintdeath = 0; 
     public string nextlevel = "Scene 2";
     private UIDEATHcounter UIDEATHcounter;
     
     // Start is called before the first frame update
     void Start()
     {
+        hintdeath = PlayerPrefs.GetInt("hintcount");
         UIDEATHcounter = GetComponent<UIDEATHcounter>(); 
         if (SceneManager.GetActiveScene().name == "Scene_1" && PlayerPrefs.GetInt("DeathCount") <= 0)
         {
@@ -79,6 +81,12 @@ public class NewBehaviourScript : MonoBehaviour
             case "Death":
                 {
                     deathCount++;
+                    hintdeath++;
+                    PlayerPrefs.SetInt("hintcount", hintdeath);
+                    if (hintdeath >= 3)
+                    {
+                        UIDEATHcounter.SetButtonActive(true);
+                    }
                     PlayerPrefs.SetInt("DeathCount", deathCount);
                     UIDEATHcounter.SetDeathText(deathCount);
                     string thislevel = SceneManager.GetActiveScene().name;
