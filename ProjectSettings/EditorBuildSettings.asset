@@ -29,6 +29,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Geo_Quest/Scenes/Scene_8.unity
     guid: 19d465b69f2480c40b27b726d5a84288
+  - enabled: 1
+    path: Assets/Geo_Quest/Scenes/Scene_13.unity
+    guid: e3e8c1f64d3bd6442bf5cf8e5e4ca739
+  - enabled: 1
+    path: Assets/Geo_Quest/Scenes/Scene_9.unity
+    guid: d3125517f83998d4ab407f96816c1e70
+  - enabled: 1
+    path: Assets/Geo_Quest/Scenes/Scene_10.unity
+    guid: 62aef0e99862f7445bf981a578996356
+  - enabled: 1
+    path: Assets/Geo_Quest/Scenes/Scene_11.unity
+    guid: 2a963f584b19a964da95c4ea791d6a26
+  - enabled: 1
+    path: Assets/Geo_Quest/Scenes/Scene_12.unity
+    guid: 632722941bcccf3488e7f4aa2b6f2408
   - enabled: 0
     path: Assets/Scenes/MenuLevel.unity
     guid: 2fa55462fc719a848b33dd6097f67562
